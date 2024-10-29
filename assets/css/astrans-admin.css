@@ -1,0 +1,414 @@
+.text-center{text-align:center}
+.astrans-container{padding:20px 20px 0 0}
+.astrans-container section{margin:0px 15px;}
+.astrans-left{
+	width: 79%;
+	float: left;
+	position: relative;
+}
+.astrans-right{
+	width: 20%;
+	float: right;
+	position: relative;
+}
+.astrans-container{
+	color: #222222;
+}
+.astrans-box{
+	width: 100%;
+	background: #ffffff;
+	position: relative;
+	display: inline-block;
+	padding-top: 30px;
+    padding-bottom: 30px;
+}
+.astrans-box .astrans-content{
+	width: 100%;
+}
+.astrans-box .astrans-content>h2{
+	margin: 0px 0px 30px;
+    font-size: 23px;
+    font-weight: bold;
+}
+.astrans_row{
+	width: 100%;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+.astrans_col_left{
+	width: 200px;
+	float: left;
+}
+.astrans_col_right{
+	float: left;
+	margin-left: 20px;
+}
+.astrans-box .astrans-content .astrans_col_left label{
+	margin: 5px 0px;
+	display: inline-block;
+	font-weight: bold;
+}
+.astrans-box .astrans-content .astrans_col_left i{
+	margin: 0px 0px;
+	display: inline-block;
+	font-size: 12px;
+}
+.astrans-save{
+	position: absolute;
+    right: 20px;
+    top: 0;
+}
+button.btn-astrans, button.btn-astrans:focus{
+	background: #009AEE;
+	border: none;
+    color: #ffffff;
+    padding: 8px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+button.btn-astrans:hover{
+	background: #FF584C;	
+}
+button.btn-astrans.save{
+	background: #cccccc !important;
+	cursor: no-drop !important;	
+}
+/* The switch - the box around the slider */
+.astrans_switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  overflow: hidden;
+}
+
+/* Hide default HTML checkbox */
+.astrans_switch input[type=checkbox] {display:none;}
+
+/* The slider */
+.astrans_slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #009AEE;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.astrans_slider::before{
+	position: absolute;
+	width: 100%;
+	content: 'ON';
+	text-align: left;
+	left: -100%;
+	font-weight: bold;
+	color: #fff;
+	webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s;
+	line-height: 2.1em;
+}
+.astrans_slider::after{
+	position: absolute;
+	width: 100%;
+	content: 'OFF';
+	text-align: right;
+	right: 10px;
+	font-weight: bold;
+	color: #fff;
+	webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s;
+	line-height: 2.1em;
+}
+.astrans_icon_round {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.astrans-container input[type=checkbox]:checked ~ .astrans_slider {
+  background-color: #FF584C;
+}
+
+.astrans-container input[type=checkbox]:focus ~ .astrans_slider {
+  box-shadow: 0 0 1px #FF584C;
+}
+
+.astrans-container input[type=checkbox]:checked ~ .astrans_icon_round {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+}
+
+.astrans-container input[type=checkbox]:checked ~ .astrans_slider::before {
+  	left: 10px;
+  	webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s;
+}
+.astrans-container input[type=checkbox]:checked ~ .astrans_slider::after {
+  	right: -100%;
+  	webkit-transition: all 0.4s ease-in;
+	-moz-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s;
+}
+
+/* Rounded sliders */
+.astrans_slider.astrans_round {
+  border-radius: 30px;
+}
+
+.astrans_slider.astrans_round::before {
+  border-radius: 50%;
+}
+.astrans-containerlabel.label_check{
+	margin-right: 20px;
+	font-style: italic;
+}
+.astrans-container input[type=checkbox]{
+	margin-right: 5px;
+}
+.astrans-container table{
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+}
+.astrans-container table tbody tr:nth-child(odd){
+	background: #f1f1f1;
+}
+.astrans-container table tbody tr td{
+	word-break: break-word;
+}
+.astrans-container table tbody tr td input[type=text]{
+	width: 100%;
+}
+.astrans-container table input[type=checkbox]{
+	margin: 0px;
+}
+.astrans-container table .btn-astrans{
+	padding: 8px 15px;
+}
+.astrans-container table thead th,.astrans-container table tfoot th{
+	font-weight: bold;
+}
+#astrans_loading{
+	display: none;
+}
+#astrans_loading.active{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.75);
+	z-index: 9999;
+}
+#astrans_loading img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	max-width: 100%;
+}
+.astrans_loading{
+	background: #ffffff !important;
+}
+#astrans_loading2{
+	text-align: center;
+	position: absolute;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.75);
+    top: 37px;
+    bottom: 37px;
+    min-height: 150px;
+    display: none;
+}
+#astrans_loading2.active{
+	display: block;
+}
+#astrans_loading2 img{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.astrans_for label{
+	margin-right: 30px;
+	vertical-align: text-bottom;
+}
+#astrans_sync{
+
+}
+.astrans_search{
+	text-align: right;
+}
+.astrans_search input, .astrans_search input:focus{
+	padding: 5px 10px;
+	margin: 0px;
+	box-shadow: none;
+	border-color: #ddd;
+}
+.astrans_search button, .astrans_search button:hover, .astrans_search button:focus{
+    margin: 0px;
+    padding: 7px 10px;
+    border-radius: 0;
+    margin-left: -5px;
+}
+.astrans-container input[disabled]{
+	border: 1px solid #b4b9be !important;
+	cursor: no-drop !important;
+}
+#astrans_navi{
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+#astrans_navi a{
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #222;
+	margin: 0px 2px;
+	border: 1px solid #E5E5E5;
+	background: #fff;
+}
+#astrans_navi a:hover, #astrans_navi a:focus, #astrans_navi a.active{
+	background: #32373C;
+	color: #fff;
+	outline: none;
+	box-shadow: none;
+	font-weight: bold;
+}
+select[name=astrans_paged]{
+	padding: 0 5px;
+    height: 31px;
+    line-height: 0px;
+    vertical-align: inherit;
+}
+.astrans_hide{
+	display: none!important;
+}
+.astrans_show{
+	display: none!important;
+}
+.astrans_sidebar h1{
+	line-height: initial;
+}
+.astrans_sidebar h3{
+	margin-bottom: 0px;
+}
+.astrans_sidebar p{
+	margin-top: 0px;
+}
+.astrans_star{
+	margin-bottom: 20px;
+}
+.astrans_star a{
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	margin-top: 30px;
+}
+.astrans_star a:last-child{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.astrans_star a span{
+	color: #ffc733;
+	margin: 0px 3px;
+}
+.astrans_star a span:nth-child(2n){
+	font-size: 30px;
+	height: 30px;
+	width: 30px;
+	margin-top: -7px;
+}
+.astrans_star a span:nth-child(3){
+	font-size: 40px;
+	height: 40px;
+	width: 40px;
+	margin-top: -13px;
+}
+.astrans_sidebar form{
+	text-align: center;
+}
+.astrans-content form input, .astrans-content form textarea{
+	width: 50%;
+	margin: 5px auto;
+}
+.astrans-content .thank{
+	padding: 30px 0px;
+	text-align: center;
+	font-size: 28px;
+	width: 50%;
+	color: #1DA1F2;
+	font-weight: bold;
+	line-height: 1.5;
+}
+.astrans_sidebar .author{
+	background: #46C3E6;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+    font-size: 14px;
+    line-height: 1;
+}
+#messenger_ast{
+	position: fixed;
+    right: 1%;
+    top: 5%;
+}
+#messenger_ast i{
+	color: #2ECC71;
+}
+#messenger_ast .mes.mes-no i{
+	color: #FF584C;
+}
+#messenger_ast .mes{
+	background: #333333;
+	padding: 7px 10px 7px 5px;
+	color: #ffffff;
+    margin-bottom: 5px; 
+    display: none;
+    max-width: 290px;
+}
+#messenger_ast .mes span{
+	font-weight: bold;
+}
+.astrans_how_to ul{
+	margin-top: 0px;
+}
+td.icon_tran{
+	vertical-align: middle;
+}
+.icon_tran .dashicons-no{
+	color: #E65D25;
+}
+.icon_tran .dashicons-yes{
+	color: #46C3E6
+}
